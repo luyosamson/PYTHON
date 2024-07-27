@@ -1,6 +1,6 @@
 def display_menu(products):
     print("Available Products:")
-    for i, (product, price) in enumerate(products, 1):
+    for i, (product, price) in enumerate(products):
         print(f"{i}. {product}: ${price:.2f}")
 
 def add_to_cart(products, cart):
@@ -19,27 +19,27 @@ def add_to_cart(products, cart):
         except ValueError:
             print("Invalid input. Please enter a number.")
 
-def calculate_total(cart):
-    total_cost = sum(item[1] for item in cart)
-    return total_cost
+# def calculate_total(cart):
+#     total_cost = sum(item[1] for item in cart)
+#     return total_cost
 
-def apply_discount(total_cost):
-    if total_cost > 100:
-        discounted_cost = total_cost * 0.9
-    else:
-        discounted_cost = total_cost
-    return discounted_cost
+# def apply_discount(total_cost):
+#     if total_cost > 100:
+#         discounted_cost = total_cost * 0.9
+#     else:
+#         discounted_cost = total_cost
+#     return discounted_cost
 
-def print_receipt(cart, total_cost, discounted_cost):
-    print("\nReceipt:")
-    for product, price in cart:
-        print(f"{product}: ${price:.2f}")
-    print(f"\nTotal Cost before Discount: ${total_cost:.2f}")
-    if discounted_cost < total_cost:
-        print(f"10% Discount Applied! Final Cost: ${discounted_cost:.2f}")
-    else:
-        print("No Discount Applied.")
-    print("Thank you for shopping with us!")
+# def print_receipt(cart, total_cost, discounted_cost):
+#     print("\nReceipt:")
+#     for product, price in cart:
+#         print(f"{product}: ${price:.2f}")
+#     print(f"\nTotal Cost before Discount: ${total_cost:.2f}")
+#     if discounted_cost < total_cost:
+#         print(f"10% Discount Applied! Final Cost: ${discounted_cost:.2f}")
+#     else:
+#         print("No Discount Applied.")
+#     print("Thank you for shopping with us!")
 
 # Sample data
 products = [
@@ -49,18 +49,20 @@ products = [
     ("Milk", 3.49),
     ("Bread", 2.99)
 ]
+r=display_menu(products)
+print(r)
 
 # Main program
-def main():
-    cart = []
-    display_menu(products)
-    add_to_cart(products, cart)
-    total_cost = calculate_total(cart)
-    discounted_cost = apply_discount(total_cost)
-    print_receipt(cart, total_cost, discounted_cost)
+# def main():
+#     cart = []
+#     display_menu(products)
+#     add_to_cart(products, cart)
+#     total_cost = calculate_total(cart)
+#     discounted_cost = apply_discount(total_cost)
+#     print_receipt(cart, total_cost, discounted_cost)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
 
 # Explanation:

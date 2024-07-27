@@ -1,10 +1,11 @@
 class Book:
-    def __init__(self,title,author,pages):
-        self.title=title
-        self.author=author
-        self.pages=pages
-    def get_book_info(self):
-        print(self.title,self.author,self.pages)
+    def __init__(s,title,author,pages):
+        s.title=title
+        s.author=author
+        s.pages=pages
+    def get_book_info(s):
+        print(s.title,s.author,s.pages)
 
 b1=Book("Python V1","Luyo Sam",100)
 b1.get_book_info()
+
